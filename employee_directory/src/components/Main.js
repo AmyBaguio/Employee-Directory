@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import SearchBox from "./SearchBox";
-//import ResultList from "./ResultList";
+import DataArea from "./DataArea";
+//import DataBody from "./DataBody";
+//import DataTable from "./DataTable";
 import API from "../utils/API";
+import "../styles/Main.css";
 
 class Main extends Component {
   state = {
@@ -42,7 +45,7 @@ class Main extends Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        <ResultList results={this.state.results} />
+        <DataArea results={this.state.results} />
       </div>
     );
   }

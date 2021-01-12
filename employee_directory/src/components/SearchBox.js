@@ -1,22 +1,26 @@
 import React from "react";
+import "../styles/SearchBox.css";
+
+const styles = {
+  searchBoxStyle: {
+  
+    
+  }
+};
 
 function SearchBox(props) {
   return (
     <form>
-      <div className="form-group">
-        <label htmlFor="search">Search:</label>
+      <div style={styles.searchBoxStyle} className="form-group">
         <input
           onChange={props.handleInputChange}
           value={props.search}
           name="search"
           type="text"
           className="form-control"
-          placeholder="Search for an Employee"
+          placeholder="Search"
           id="search"
         />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary mt-3">
-          Search
-        </button>
       </div>
     </form>
   );
