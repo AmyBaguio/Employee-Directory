@@ -1,15 +1,15 @@
 .navbar {
     
-    height: 100px;
+    height: 80px;
   }
   
   .navbar a {
     color: white;
     font-size: 2.5rem;
     text-decoration: none;
-    margin: 10px;
-    line-height: 3;
-    text-align: center;
+    margin: 5px;
+    justify-content: center;
+    text-align: justify;
     
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     

@@ -3,8 +3,8 @@ import "../styles/SearchBox.css";
 
 const styles = {
   searchBoxStyle: {
-  
-    
+    backgroundcolor: "rgba(124, 121, 121, 0.342)"
+     
   }
 };
 

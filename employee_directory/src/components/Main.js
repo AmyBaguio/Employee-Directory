@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import SearchBox from "./SearchBox";
-import DataArea from "./DataArea";
-//import DataBody from "./DataBody";
-//import DataTable from "./DataTable";
+import DataTable from "./DataTable";
 import API from "../utils/API";
 import "../styles/Main.css";
 
@@ -45,7 +43,7 @@ class Main extends Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        <DataArea results={this.state.results} />
+        <DataTable results={this.state.results} />
       </div>
     );
   }

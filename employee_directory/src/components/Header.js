@@ -14,7 +14,7 @@ const styles = {
 function Header() {
   return (
     <header style={styles.headerStyle} className="header">
-      <h1 style={styles.headingStyle}>Click on carrots to filter by heading or use te search box to narrow your results.</h1>
+      <h1 style={styles.headingStyle}>Use the search box to narrow your results.</h1>
     </header>
   );
 }
