@@ -7,12 +7,12 @@ import "../styles/Main.css";
 class Main extends Component {
   state = {
     search: "",
-    results: []
+    results: {}
   };
 
   // When this component mounts, search the Random User API to render random employees
   componentDidMount() {
-    this.searchEmployee("employees");
+    this.searchEmployee("employee");
   }
 
   searchEmployee = query => {
@@ -38,12 +38,12 @@ class Main extends Component {
   render() {
     return (
       <div>
+        <DataTable results={this.state.results} />
         <SearchBox
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
-        />
-        <DataTable results={this.state.results} />
+        /> 
       </div>
     );
   }
