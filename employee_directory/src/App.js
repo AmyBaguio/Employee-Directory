@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "../src/components/Nav";
 import Header from "../src/components/Header";
 import SearchBox from "../src/components/SearchBox";
-//import Main from "../src/components/Main";
+import Main from "../src/components/Main";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <Header/>
       <SearchBox/>
-    
+      <Main/>
     </div>
   );
 }

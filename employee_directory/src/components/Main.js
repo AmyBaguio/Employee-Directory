@@ -4,20 +4,22 @@ import DataTable from "./DataTable";
 import API from "../utils/API";
 import "../styles/Main.css";
 
+
 class Main extends Component {
   state = {
     search: "",
-    results: {}
+    results: []
   };
 
   // When this component mounts, search the Random User API to render random employees
   componentDidMount() {
-    this.searchEmployee("employee");
+    this.searchEmployee();
   }
 
-  searchEmployee = query => {
-    API.search(query)
-      .then(res => this.setState({ results: res.data.data }))
+  searchEmployee = () => {
+    API.getUsers()
+  
+      .then(res => this.setState({ results: res.data.results }))
       .catch(err => console.log(err));
   };
 
@@ -38,12 +40,9 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <DataTable results={this.state.results} />
-        <SearchBox
-          search={this.state.search}
-          handleFormSubmit={this.handleFormSubmit}
-          handleInputChange={this.handleInputChange}
-        /> 
+        
+         <DataTable results={this.state.results} /> 
+        
       </div>
     );
   }

@@ -3,7 +3,13 @@ import axios from "axios";
 export default {
     // Gets all users
     getUsers: function() {
-        return axios.get ("https://randomuser.me/api/?results=200&nat=us");
+        return axios.get("https://cors-anywhere.herokuapp.com/https://randomuser.me/api/?results=10", {
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                "Access-Control-Allow-Headers": 'Origin,X-Requested-With,Content-Type,x-auth,Accept,content-type,application/json'
+
+              }
+        });
     }
 }
 
